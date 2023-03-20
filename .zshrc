@@ -119,6 +119,8 @@ alias lg="lazygit"
 alias rm="rm -i"
 alias mv="mv -i"
 alias gpu="git push -u origin HEAD"
+alias gp="git pull"
+alias gP="git push"
 
 function gcbj() {
   if [ -z $1 ]; then
