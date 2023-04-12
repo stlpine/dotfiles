@@ -114,6 +114,7 @@ export EDITOR='nvim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi="nvim"
 alias vim="nvim"
+alias vimdiff="nvim -d"
 alias cat="bat"
 alias lg="lazygit"
 alias gw="./gradlew"
