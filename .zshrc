@@ -72,6 +72,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# Load zoxide
+eval "$(zoxide init zsh)"
+
 # Load fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
