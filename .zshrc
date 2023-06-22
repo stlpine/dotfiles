@@ -138,7 +138,10 @@ function gcbj() {
 }
 
 function gch() {
-  git checkout "$(git branch --all | fzf | tr -d '[:space:]')"
+  local branches branch
+  branches=$(git branch --all) &&
+  branch=$(echo "$branches" | fzf +m) &&
+  git checkout $(echo "$branch" | tr -d '[:space:]')
 }
 
 function fbr() {
