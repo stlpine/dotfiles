@@ -32,6 +32,7 @@ set NERDTree
 set multiple-cursors
 
 " Remap multiple-cursors shortcuts to match terryma/vim-multiple-cursors
+" Should remove ctrl + N and ctrl + P from intelliJ keymap for this to work
 nmap <C-n> <Plug>NextWholeOccurrence
 xmap <C-n> <Plug>NextWholeOccurrence
 nmap g<C-n> <Plug>NextOccurrence
