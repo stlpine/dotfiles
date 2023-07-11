@@ -43,7 +43,7 @@ xmap <C-p> <Plug>RemoveOccurrence
 " Note that the default <A-n> and g<A-n> shortcuts don't work on Mac due to dead keys.
 " <A-n> is used to enter accented text e.g. ñ
 " <A-n> can be used if Unicode Hex Input is selected as the input source
-nmap <S-C-n> <Plug>AllWholeOccurrences
-xmap <S-C-n> <Plug>AllWholeOccurrences
-nmap g<S-C-n> <Plug>AllOccurrences
-xmap g<S-C-n> <Plug>AllOccurrences
+nmap <C-S-n> <Plug>AllWholeOccurrences
+xmap <C-S-n> <Plug>AllWholeOccurrences
+nmap g<C-S-n> <Plug>AllOccurrences
+xmap g<C-S-n> <Plug>AllOccurrences
