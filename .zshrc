@@ -72,6 +72,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# zsh-autosuggestions config
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
 # Load zoxide
 eval "$(zoxide init zsh)"
 
