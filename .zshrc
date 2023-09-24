@@ -158,7 +158,7 @@ function fbr() {
 }
 
 function lk() {
-  cd "$(walk "$@")"
+  cd "$(walk --icons "$@")"
 }
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
