@@ -132,6 +132,8 @@ alias mv="mv -i"
 alias gpu="git push -u origin HEAD"
 alias gp="git pull"
 alias gP="git push"
+alias gs="git stash"
+alias gsp="git stash pop"
 
 function gcbj() {
   if [ -z $1 ]; then
