@@ -12,3 +12,9 @@
 [alias]
 	gone = ! "git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D"
 	pl = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
+[diff]
+	algorithm = histogram
+[branch]
+	sort = -committerdate
+[merge]
+	conflictstyle = zdiff3
