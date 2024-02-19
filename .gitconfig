@@ -7,7 +7,7 @@
 	process = git-lfs filter-process
 	required = true
 [core]
-	excludesfile = /Users/jason/.gitignore_global
+	excludesFile = /Users/jyoo/.gitignore_global
 	editor = nvim
 [alias]
 	gone = ! "git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D"
