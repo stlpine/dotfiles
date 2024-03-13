@@ -190,7 +190,7 @@ function lk() {
 }
 
 # switch aws cli profile
-function aws-ctx() {
+function awsctx() {
   export AWS_PROFILE="$(aws configure list-profiles | fzf)"
   echo "Switched to profile ""$AWS_PROFILE""."
 }
