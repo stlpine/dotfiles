@@ -91,6 +91,9 @@ plugins=(git fzf fzf-tab asdf zsh-autosuggestions zsh-syntax-highlighting tmux)
 # Tmux autostart
 # ZSH_TMUX_AUTOSTART=true
 
+# Configure completions for homebrew formula
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -134,6 +137,7 @@ alias gp="git pull"
 alias gP="git push"
 alias gs="git stash"
 alias gsp="git stash pop"
+alias k="kubectl"
 
 function gcbj() {
   if [ -z $1 ]; then
@@ -183,6 +187,12 @@ function gshow() {
 
 function lk() {
   cd "$(walk --icons "$@")"
+}
+
+# switch aws cli profile
+function aws-ctx() {
+  export AWS_PROFILE="$(aws configure list-profiles | fzf)"
+  echo "Switched to profile ""$AWS_PROFILE""."
 }
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
