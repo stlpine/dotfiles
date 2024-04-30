@@ -195,6 +195,16 @@ function awsctx() {
   echo "Switched to profile ""$AWS_PROFILE""."
 }
 
+function jdkctx() {
+  if [ -z $1 ]; then
+    echo "empty argument is not supported"
+    return -1
+  fi
+
+  export JAVA_HOME=$(/usr/libexec/java_home -v $1)
+  echo "JAVA_HOME set to $JAVA_HOME"
+}
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
