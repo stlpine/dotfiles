@@ -78,6 +78,9 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 # Load zoxide
 eval "$(zoxide init zsh)"
 
+# Load mise
+eval "$(/opt/homebrew/bin/mise activate zsh)"
+
 # Load fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -86,7 +89,7 @@ eval "$(zoxide init zsh)"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf fzf-tab asdf zsh-autosuggestions zsh-syntax-highlighting tmux)
+plugins=(git fzf fzf-tab zsh-autosuggestions zsh-syntax-highlighting tmux)
 
 # Tmux autostart
 # ZSH_TMUX_AUTOSTART=true
