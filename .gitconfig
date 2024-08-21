@@ -12,6 +12,7 @@
 [alias]
 	gone = ! "git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D"
 	pl = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
+	suicide = "!current_branch=$(git branch --show-current) && git checkout $(basename $(git symbolic-ref --short refs/remotes/origin/HEAD)) && git branch -D $current_branch"
 [diff]
 	algorithm = histogram
 [branch]
