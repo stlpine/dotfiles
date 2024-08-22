@@ -30,6 +30,8 @@ map Q gq
 set surround
 set NERDTree
 set multiple-cursors
+set which-key
+set ideajoin
 
 " Remap multiple-cursors shortcuts to match terryma/vim-multiple-cursors
 " Should remove ctrl + N and ctrl + P from intelliJ keymap for this to work
