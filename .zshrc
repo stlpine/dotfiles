@@ -116,6 +116,10 @@ source $ZSH/oh-my-zsh.sh
 # Preferred editor
 export EDITOR='nvim'
 
+# Default Java Home
+DEFAULT_JDK_VERSION=19
+export JAVA_HOME=$(/usr/libexec/java_home -v $DEFAULT_JDK_VERSION)
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -198,13 +202,13 @@ function awsctx() {
   echo "Switched to profile ""$AWS_PROFILE""."
 }
 
-function jdkctx() {
+function setJavaHome() {
   if [ -z $1 ]; then
     echo "empty argument is not supported"
     return -1
   fi
 
-  export JAVA_HOME=$(/usr/libexec/java_home -v $1)
+  export JAVA_HOME="$(/usr/libexec/java_home -v $1)"
   echo "JAVA_HOME set to $JAVA_HOME"
 }
 
