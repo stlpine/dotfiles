@@ -283,6 +283,7 @@
                       "^com\\.jetbrains\\.goland$",
                       "^com\\.jetbrains\\.intellij$",
                       "^com\\.jetbrains\\.intellij\\.ce$",
+                      "^com\\.microsoft\\.VSCode$",
                       "^md\\.obsidian$",
                       "^dev\\.zed\\.Zed$"
                     ]
