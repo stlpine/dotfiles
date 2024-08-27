@@ -78,6 +78,9 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 # Load zoxide
 eval "$(zoxide init zsh)"
 
+# Load navi
+eval "$(navi widget zsh)"
+
 # Load mise
 eval "$(/opt/homebrew/bin/mise activate zsh)"
 
