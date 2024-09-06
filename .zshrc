@@ -148,6 +148,7 @@ alias gP="git push"
 alias gs="git stash"
 alias gsp="git stash pop"
 alias k="kubectl"
+alias tmux="tmux -u"
 
 function gcbj() {
   if [ -z $1 ]; then
