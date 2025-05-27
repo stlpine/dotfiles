@@ -149,6 +149,7 @@ alias gp="git pull"
 alias gP="git push"
 alias gs="git stash"
 alias gsp="git stash pop"
+alias glt="git describe --tags --abbrev=0"
 alias k="kubectl"
 alias tmux="tmux -u"
 
