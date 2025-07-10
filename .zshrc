@@ -149,9 +149,9 @@ alias gp="git pull"
 alias gP="git push"
 alias gs="git stash"
 alias gsp="git stash pop"
-alias glt="git describe --tags --abbrev=0"
 alias k="kubectl"
 alias tmux="tmux -u"
+alias k9="k9s --readonly"
 
 function gcbj() {
   if [ -z $1 ]; then
@@ -169,6 +169,10 @@ function gch() {
   branch=$(echo "$branches" |
            fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
   git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+}
+
+function glt() {
+  git describe --tags "$(git rev-list --tags --max-count=1)"
 }
 
 # checkout git branch/tag, with a preview showing the commits between the tag/branch and HEAD
