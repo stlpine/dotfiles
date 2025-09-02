@@ -152,6 +152,8 @@ alias gsp="git stash pop"
 alias k="kubectl"
 alias tmux="tmux -u"
 alias k9="k9s --readonly"
+alias dcu="docker compose up -d"
+alias dcd="docker compose down"
 
 function gcbj() {
   if [ -z $1 ]; then
@@ -221,6 +223,12 @@ function setJavaHome() {
 
   export JAVA_HOME="$(/usr/libexec/java_home -v $1)"
   echo "JAVA_HOME set to $JAVA_HOME"
+}
+
+function miseVenv() {
+  touch mise.toml
+  echo """[tools]\npython = \"3.12\"\n\n[env]\n_.python.venv = { path = \".venv\", create = true }""" > mise.toml
+  mise trust
 }
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
