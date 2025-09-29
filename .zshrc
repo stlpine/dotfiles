@@ -134,6 +134,8 @@ export JAVA_HOME=$(/usr/libexec/java_home -v $DEFAULT_JDK_VERSION)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ls="eza --header --group --git --long"
+alias ll="eza --header --group --long --all"
 alias vi="nvim"
 alias vim="nvim"
 alias vimdiff="nvim -d"
@@ -153,7 +155,7 @@ alias k="kubectl"
 alias tmux="tmux -u"
 alias k9="k9s --readonly"
 alias dcu="docker compose up -d"
-alias dcd="docker compose down"
+alias dcd="docker compose down -v"
 
 function gcbj() {
   if [ -z $1 ]; then
